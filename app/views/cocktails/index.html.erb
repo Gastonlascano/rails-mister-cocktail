@@ -1,0 +1,27 @@
+<div class="home-banner">
+  <h1>Le Wagon</h1>
+  <p>
+  <span id="banner-typed-text"></span>
+</p>
+</div>
+
+
+<div class="container mt-5">
+  <div class="text-center">
+  <h1>index cocktails</h1>
+
+<ul>
+
+  <% @cocktails.each do |cocktail| %>
+  <li>
+    <%= cocktail.name %>
+    <%= link_to 'More details', cocktail_path(cocktail) %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+</div>
+</div>
+
+
